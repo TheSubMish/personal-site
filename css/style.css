@@ -168,23 +168,23 @@
 }
 
 .s {
-    background-image: url("../image/tom3.png");
+    background-image: url("./image/tom3.png");
 }
 
 .d {
-    background-image: url("../image/tom4.png");
+    background-image: url("./image/tom4.png");
 }
 
 .j {
-    background-image: url("../image/snare.png");
+    background-image: url("./image/snare.png");
 }
 
 .k {
-    background-image: url("../image/crash.png");
+    background-image: url("./image/crash.png");
 }
 
 .l {
-    background-image: url("../image/kick.png");
+    background-image: url("./image/kick.png");
 }
 
 
