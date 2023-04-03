@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Stint+Ultra+Condensed&display=swap');
+.logo-font {
+    font-family: 'Kaushan Script', cursive;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 300px;
+}
+
+.log-bg {
+    background-color: #f2f5f5;
+}
+
+
+/* NAVBAR */
+
+.nav-link div ul {
+    display: none;
+    /* position: absolute; */
+}
+
+.nav-link div:hover ul {
+    display: block;
+}
+
+
+/* NAVBAR LINK ANIMATION */
+
+.hove {
+    display: inline-block;
+    position: relative;
+}
+
+.hove:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hove:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* LOGIN PAGE */
+
+.log-in {
+    display: flex;
+    background-color: #f2f5f5;
+    position: absolute;
+    top: 15vh;
+    left: 25vw;
+    padding: 70px;
+    border-radius: 10px;
+}
+
+.container1 {
+    padding-top: 70px;
+    margin-right: 40px;
+}
+
+.container2 {
+    max-width: 330px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px #c1baba;
+}
+
+#title {
+    background-color: #ffffff;
+    padding-bottom: 20px;
+}
+
+.form-content {
+    background-color: #ffffff;
+    padding-bottom: 10px;
+}
+
+.inp {
+    width: 300px;
+    height: 20px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+.inp:focus,
+.con-inp:focus {
+    border: none;
+    outline: gainsboro solid 2px;
+}
+
+.forget-password {
+    background-color: #ffffff;
+    color: black;
+}
+
+.sub-btn {
+    width: 150px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.no-acc {
+    margin: 2px;
+}
+
+
+/* SIGN UP */
+
+.sign-up {
+    width: 150px;
+    padding: 5px 50px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(254 55 55);
+    border-radius: 5px;
+}
+
+.sign-up:hover {
+    background-color: red;
+}
+
+
+/* TABLE */
+
+#bill-table tr th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#bill-table tr td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#bill-table tr:nth-child(even) {
+    background-color: #f2f5f5;
+}
+
+
+/* DRUM */
+
+.w {
+    background-image: url("/image/tom1.png");
+}
+
+.a {
+    background-image: url("/image/tom2.png");
+}
+
+.s {
+    background-image: url("/image/tom3.png");
+}
+
+.d {
+    background-image: url("/image/tom4.png");
+}
+
+.j {
+    background-image: url("/image/snare.png");
+}
+
+.k {
+    background-image: url("/image/crash.png");
+}
+
+.l {
+    background-image: url("/image/kick.png");
+}
+
+
+/* RESPONSIVE  */
+
+@media (max-width: 639px) {
+    /* NAVBAR */
+    #menu-items {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+    }
+    #menu-items div {
+        text-align: center;
+        padding: 20px 0;
+    }
+    #menu-items div ul li {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 639px) {
+    /* PROJECTS */
+    .card:hover .show {
+        display: none;
+    }
+    .card:hover .hide {
+        display: block;
+    }
+}

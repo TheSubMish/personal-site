@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Log-In</title>
+</head>
+<body>
+    <div class="log-bg h-screen lg:h-auto lg:flex lg:mx-20 lg:my-20 xl:mx-72 xl:my-24">
+        <div class="py-6 w-max mx-auto my-auto">
+            <img src="image/logo1.png" alt="The SubMish" class="w-48 lg:w-80">
+        </div>
+        <div class="my-10 mx-5 sm:mx-40 lg:mx-16 lg:my-20 lg:px-20 bg-white text-center rounded-md shadow-2xl">
+            <div>
+                <h1 class="py-5 text-2xl font-bold rounded-t-md">Log-In</h1>
+            </div>
+            <div class="pb-5">
+                <form action="index.html" onsubmit="return logvalid()">
+                    <div class="my-2 mx-5">
+                        <input type="text" name="username" id="username" placeholder="Username" class="mb-3 border border-black px-4 py-1 rounded-md w-full">
+                    </div>
+                    <div class="my-2 mx-5">
+                        <input type="password" name="password" id="password" placeholder="Password" class="mb-3 border border-black px-4 py-1 rounded-md w-full">
+                    </div>
+                    <div>
+                        <a href="OTP.html" class="text-blue-500">Forget password?</a>
+                    </div>
+                    <div class="my-3">
+                        <button type="submit" class="bg-black text-white px-5 py-1 rounded-lg">Log-in</button>
+                    </div>
+                    <div>
+                        <p>Don't have a account?</p>
+                    </div>
+                    <div class="my-3">
+                        <a href="sign.html" class="bg-red-500 text-white px-3 py-1.5 rounded-lg">Sign-Up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Billing System</title>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <div class="flex sticky top-0 bg-white justify-between px-10 lg:px-24 xl:px-40 pt-7 lg:pt-10">
+        <div>
+            <a href="index.html#home" class="text-2xl sm:text-3xl xl:text-4xl font-bold logo-font">TheSubMish.io</a>
+        </div>
+        <div>
+            <div class="sm:hidden my-1" id="menu" onclick="menu()"><span class="material-symbols-outlined">menu</span></div>
+            <div class="hidden sm:flex nav-link" id="menu-items">
+                <div class="mx-3 xl:mx-6" onclick="hide()"><a href="index.html#home" class="text-xl font-bold hove">Home</a></div>
+                <div class="mx-3 xl:mx-6" onclick="hide()"><a href="index.html#about" class="text-xl font-bold hove">About</a></div>
+                <div class="mx-3 xl:mx-6"><a class="text-xl font-bold hove text-gray-500">Projects</a>
+                    <ul class="relative sm:absolute">
+                        <li class="text-xl font-bold py-1" onclick="hide()"><a href="bill.html" class="hove">Billing System</a></li>
+                        <li class="text-xl font-bold py-1" onclick="hide()"><a href="calculator.html" class="hove">Calculator</a></li>
+                        <li class="text-lg font-bold py-1" onclick="hide()"><a href="index.html#project" class="text-blue-500 hover:text-black">More...</a></li>
+                    </ul>
+                </div>
+                <div class="mx-3 xl:mx-6" onclick="hide()"><a href="index.html#contact" class="text-xl font-bold hove">Contact Us</a></div>
+                <div class="mx-3 xl:mx-6" onclick="hide()"><a href="sign.html" class="text-xl font-bold hove">Join Us</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Billing System -->
+    <div>
+        <div class="py-10 sm:mx-20 sm:py-12 lg:mx-40 xl:mx-96">
+            <div>
+                <h1 class="px-10 text-2xl text-gray-500 font-bold">Item Details:</h1>
+            </div>
+            <div class="px-10">
+                <form id="billForm">
+                    <div>
+                        <input type="text" name="item" id="item" placeholder="Item Name" class="border border-black rounded p-2 mb-3 w-full con-inp valid">
+                    </div>
+                    <div class="flex">
+                        <input type="number" name="quantity" id="quantity" placeholder="Quantity" class="border border-black rounded p-2 mb-3 w-full con-inp valid">
+                        <input type="number" name="rate" id="rate" placeholder="Rate" class="border border-black rounded p-2 mb-3 w-full con-inp ml-3 valid">
+                    </div>
+                    <div>
+                        <input type="button" class="text-black bg-white border border-black rounded-md px-4 py-2" id="submit" value="Submit">
+                        <button type="reset" class="border border-black rounded-md px-4 py-2 bg-black text-white" id="clear">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="p-10 sm:mx-20 sm:py-12 lg:mx-40 xl:mx-96">
+            <div>
+                <h1 class="text-2xl text-gray-500 font-bold">Bill:</h1>
+            </div>
+            <div>
+                <table id="bill-table">
+                    <tr>
+                        <th class="text-white bg-black">S.N.</th>
+                        <th class="text-white bg-black w-full">Item</th>
+                        <th class="text-white bg-black">Qty</th>
+                        <th class="text-white bg-black">Rate</th>
+                        <th class="text-white bg-black">Amount</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="py-5 font-bold">
+                <p>Total Amount: <span id="totAmt">0</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/bill.js"></script>
+</body>
+
+</html>
